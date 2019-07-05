@@ -1,3 +1,5 @@
+<h1><%= y + y + z %></h1>
+
 <%= form_with(model: movie, local: true) do |form| %>
   <% if movie.errors.any? %>
     <div id="error_explanation">
@@ -10,8 +12,6 @@
       </ul>
     </div>
   <% end %>
-
-  <h1><%= x + y + z%></h1>
 
   <div class="field">
     <%= form.label :title %>
@@ -29,7 +29,7 @@
   </div>
 
   <div class="field">
-    <%= form.hidden_field :studio_id, :value => studio %>
+    <%= form.hidden_field :studio_id, :value => studio.id %>
   </div>
 
   <div class="actions">
